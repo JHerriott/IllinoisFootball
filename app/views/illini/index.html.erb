@@ -1,0 +1,25 @@
+<%# def new_illini_team_url
+#	return "http://localhost:3000/illinifootball/home/new"
+	
+#	end %>
+
+<h1>Greatest Illini Football Teams</h1>
+
+
+
+	<%= link_to 'Add your favorite Illini Team', new_illini_team_url %>   
+<ul>	
+	<%@illini.each do |team|%>
+	<li><%= link_to team.team, illini_team_url(team.id)%> 
+	 	#of wins <%= team.wins %> : #of losses <%= team.losses%> 
+		|
+		<%= link_to 'Edit', illini_team_edit_url(team.id)%> 
+			|
+			
+		<%= link_to "Delete", illini_team_edit_url(team.id)
+			"http://localhost:3000/illinifootball/home/#{team.id}" , 
+			:method => :delete, :confirm => "Are you sure you want to DELETE this GREAT ILLINI TEAM???!!!"%>
+		
+		</li>
+	<%end%>
+</ul>		

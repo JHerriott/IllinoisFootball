@@ -1,0 +1,13 @@
+<h1> Add Your Favorite Illini Team <h1>
+	
+	<%= form_tag "http://localhost:3000/illinifootball/home/create" do %>
+		<%= label_tag "Team:" %>
+		<%= text_field_tag "team" %>
+		<%= label_tag "Wins:" %>
+		<%= text_field_tag "wins" %>
+		<%= label_tag "Losses:" %>
+		<%= text_field_tag "losses" %>
+		
+		<%= submit_tag "Add A ANOTHER GREAT ILLINI TEAM" %>
+		
+	<%end %>

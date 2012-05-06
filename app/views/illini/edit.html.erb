@@ -1,0 +1,13 @@
+<h1> Edit Your Favorite Illini Team's Info </h1>
+
+	<%= form_tag "http://localhost:3000/illinifootball/home/#{@illinis.id}", :method => :put do %>
+			<%= label_tag "Team:" %>
+			<%= text_field_tag "team", @illinis.team %>
+			<%= label_tag "Wins:" %>
+			<%= text_field_tag "wins", @illinis.wins %>
+			<%= label_tag "Losses:" %>
+			<%= text_field_tag "losses", @illinis.losses %>
+			
+			<%= submit_tag "Add New Illini Team Info"%>
+			
+			<%end%>
